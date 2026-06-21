@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/images/WhatsApp Image 2026-05-31 at 8.05.31 PM.jpeg" />
+  <title>FAQ | V-Premix Tea</title>
+  <meta name="description"
+    content="Frequently asked questions about V-Premix Tea — products, ordering, packaging, delivery, and dealership." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div id="scrollProgress" class="scroll-progress"></div>
+  <!-- ANNOUNCEMENT BAR -->
+  <div id="announcementBar" class="announcement-bar">
+    <div class="container">
+      <span><i class="fas fa-gift me-2" style="color:var(--secondary)"></i><strong>Limited Offer:</strong> Orders above
+        100kg/month get <strong>FREE custom branding on packaging!</strong> <a href="./contact.html"
+          class="text-gold fw-bold ms-2">Enquire Now →</a></span>
+      <button class="announcement-close" onclick="dismissAnnouncement()" title="Dismiss"><i
+          class="fas fa-times"></i></button>
+    </div>
+  </div>
+
+  <div class="loading-screen" id="loadingScreen">
+    <div class="logo">
+      <img src="./assets/images/WhatsApp Image 2026-05-31 at 8.05.31 PM.jpeg" alt="V-Premix Logo">
+    </div>
+    <h4 class="font-serif" style="color:var(--primary)">V-Premix Tea</h4>
+    <div class="loading-progress-bar">
+      <div class="loading-progress-fill"></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 font-serif" href="./index.html">
+        <div class="logo">
+          <img src="./assets/images/WhatsApp Image 2026-05-31 at 8.05.31 PM.jpeg" alt="V-Premix Logo">
+        </div>V-Premix Tea
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./products.html"
+              data-bs-toggle="dropdown">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./products/masala-tea.html">Masala Tea Premix</a></li>
+              <li><a class="dropdown-item" href="./products/ginger-tea.html">Ginger Tea Premix</a></li>
+              <li><a class="dropdown-item" href="./products/elaichi-tea.html">Elaichi Tea Premix</a></li>
+              <li><a class="dropdown-item" href="./products/green-tea.html">Green Tea Premix</a></li>
+              <li><a class="dropdown-item" href="./products/lemon-tea.html">Lemon Tea Premix</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./shop.html"><i class="fas fa-store me-1"></i>Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link position-relative cart-nav-btn" href="./checkout.html" id="cartNavBtn"
+              title="View Cart"><i class="fas fa-shopping-basket"></i><span class="cart-badge" id="cartBadge"
+                style="display:none">0</span></a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-gold btn-sm px-3 fw-bold btn-get-quote"
+              href="./contact.html">Get Quote</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-banner">
+    <div class="container text-center">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-3">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active">FAQ</li>
+        </ol>
+      </nav>
+      <h1 class="font-serif fw-bold mb-3">Frequently Asked Questions</h1>
+      <p class="mb-0" style="max-width:550px;margin:auto">Everything you need to know about our products, ordering
+        process, and B2B partnership.</p>
+    </div>
+  </div>
+
+  <section class="py-5 bg-cream">
+    <div class="container py-4">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <i class="fas fa-search position-absolute"
+              style="left:1rem;top:50%;transform:translateY(-50%);color:var(--text-muted)"></i>
+            <input type="text" class="faq-search ps-5" placeholder="Search questions..."
+              oninput="filterFAQ(this.value)">
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-lg-8 mx-auto">
+
+          <!-- PRODUCTS -->
+          <h4 class="font-serif fw-bold mb-4 d-flex align-items-center gap-2" style="color:var(--primary)">
+            <span
+              style="width:36px;height:36px;background:rgba(212,175,55,0.15);border-radius:50%;display:inline-flex;align-items:center;justify-content:center"><i
+                class="fas fa-mug-hot text-gold small"></i></span>
+            About Our Products
+          </h4>
+          <div class="accordion mb-5" id="faqProducts">
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#p1">What types of tea premixes do you offer?</button></h2>
+              <div id="p1" class="accordion-collapse collapse show" data-bs-parent="#faqProducts">
+                <div class="accordion-body">We currently offer 5 premium variants: <strong>Masala Tea, Ginger Tea,
+                    Elaichi (Cardamom) Tea, Green Tea, and Lemon Tea</strong> premixes. All products are FSSAI certified
+                  and available in multiple packaging sizes. We also offer custom formulations for enterprise clients.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#p2">Are your products FSSAI certified?</button></h2>
+              <div id="p2" class="accordion-collapse collapse" data-bs-parent="#faqProducts">
+                <div class="accordion-body">Yes, all V-Premix Tea products carry a valid FSSAI license (11524999000XXX).
+                  Our manufacturing facility is also ISO 9001:2015 certified. We maintain complete batch traceability
+                  from raw material sourcing to dispatch.</div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#p3">What is the shelf life of your premixes?</button></h2>
+              <div id="p3" class="accordion-collapse collapse" data-bs-parent="#faqProducts">
+                <div class="accordion-body">Our premixes have a shelf life of <strong>12 months</strong> from the date
+                  of manufacturing when stored in a cool, dry place away from direct sunlight. Triple-layer
+                  moisture-proof packaging ensures product integrity throughout the shelf life.</div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#p4">How do I prepare a cup using V-Premix Tea?</button>
+              </h2>
+              <div id="p4" class="accordion-collapse collapse" data-bs-parent="#faqProducts">
+                <div class="accordion-body">Preparation is extremely simple: Add <strong>14g (approximately 1
+                    tablespoon)</strong> of V-Premix Tea powder to 100ml of hot water (85–90°C). Stir well for 30
+                  seconds until dissolved. Serve hot. No milk, sugar, or extra ingredients are needed — it's all in the
+                  blend.</div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#p5">Do you use artificial colors or flavors?</button></h2>
+              <div id="p5" class="accordion-collapse collapse" data-bs-parent="#faqProducts">
+                <div class="accordion-body">No. V-Premix Tea products are made with <strong>real tea extracts, authentic
+                    spices, and natural ingredients only</strong>. We never use artificial colors, synthetic flavors, or
+                  chemical preservatives. Our commitment to authenticity is what sets us apart.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ORDERING -->
+          <h4 class="font-serif fw-bold mb-4 d-flex align-items-center gap-2" style="color:var(--primary)">
+            <span
+              style="width:36px;height:36px;background:rgba(212,175,55,0.15);border-radius:50%;display:inline-flex;align-items:center;justify-content:center"><i
+                class="fas fa-shopping-cart text-gold small"></i></span>
+            Ordering &amp; Pricing
+          </h4>
+          <div class="accordion mb-5" id="faqOrdering">
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#o1">What is the minimum order quantity (MOQ)?</button></h2>
+              <div id="o1" class="accordion-collapse collapse show" data-bs-parent="#faqOrdering">
+                <div class="accordion-body">Our minimum order quantity is <strong>10 kg</strong> for standard orders.
+                  However, for first-time trial orders, we offer a reduced MOQ of 2 kg at standard pricing so you can
+                  test the product before committing to bulk.</div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#o2">How do I place a bulk order?</button></h2>
+              <div id="o2" class="accordion-collapse collapse" data-bs-parent="#faqOrdering">
+                <div class="accordion-body">You can place an order by: (1) Filling the inquiry form on our <a
+                    href="./contact.html" style="color:var(--primary)">Contact page</a>, (2) WhatsApp us directly at +91
+                  63523 69851, or (3) Email us at sales@vpremixtea.com. A dedicated account manager will process your
+                  order within 24 business hours.</div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#o3">Do you offer credit / payment on delivery?</button>
+              </h2>
+              <div id="o3" class="accordion-collapse collapse" data-bs-parent="#faqOrdering">
+                <div class="accordion-body">For new clients, we require 100% advance payment. After the first 3
+                  successful orders, established clients are eligible for a 30-day credit period based on order volume
+                  and business profile. Please discuss terms with your account manager.</div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#o4">Do you offer volume discounts?</button></h2>
+              <div id="o4" class="accordion-collapse collapse" data-bs-parent="#faqOrdering">
+                <div class="accordion-body">Yes, we have a tiered pricing structure. Orders above 50kg receive a 5%
+                  discount, above 200kg receive 10%, and above 500kg receive 15%. Dealers enrolled in our network
+                  program receive additional exclusive pricing. Contact us for a custom quote.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DELIVERY -->
+          <h4 class="font-serif fw-bold mb-4 d-flex align-items-center gap-2" style="color:var(--primary)">
+            <span
+              style="width:36px;height:36px;background:rgba(212,175,55,0.15);border-radius:50%;display:inline-flex;align-items:center;justify-content:center"><i
+                class="fas fa-truck text-gold small"></i></span>
+            Delivery &amp; Logistics
+          </h4>
+          <div class="accordion mb-5" id="faqDelivery">
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#d1">Do you deliver across India?</button></h2>
+              <div id="d1" class="accordion-collapse collapse show" data-bs-parent="#faqDelivery">
+                <div class="accordion-body">Yes, we deliver to all major cities and pin codes across India through our
+                  partnership with leading logistics providers. Estimated delivery time is 3–7 business days for most
+                  locations. Remote areas may take up to 10 business days.</div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#d2">What is the delivery charge?</button></h2>
+              <div id="d2" class="accordion-collapse collapse" data-bs-parent="#faqDelivery">
+                <div class="accordion-body">Orders above 25 kg qualify for <strong>free delivery</strong> to most metro
+                  cities. For smaller orders or remote locations, delivery charges are calculated based on weight and
+                  destination and communicated before order confirmation.</div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#d3">What if my order arrives damaged?</button></h2>
+              <div id="d3" class="accordion-collapse collapse" data-bs-parent="#faqDelivery">
+                <div class="accordion-body">We take packaging damage very seriously. If your order arrives damaged,
+                  please photograph the packaging and contents and WhatsApp us within 48 hours of delivery. We will
+                  arrange a replacement shipment at no extra cost or issue a full refund.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DEALERSHIP -->
+          <h4 class="font-serif fw-bold mb-4 d-flex align-items-center gap-2" style="color:var(--primary)">
+            <span
+              style="width:36px;height:36px;background:rgba(212,175,55,0.15);border-radius:50%;display:inline-flex;align-items:center;justify-content:center"><i
+                class="fas fa-handshake text-gold small"></i></span>
+            Dealership &amp; Partnership
+          </h4>
+          <div class="accordion mb-4" id="faqDealership">
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#dl1">How do I become a V-Premix Tea dealer?</button></h2>
+              <div id="dl1" class="accordion-collapse collapse show" data-bs-parent="#faqDealership">
+                <div class="accordion-body">Visit our <a href="./contact.html" style="color:var(--primary)">Contact
+                    page</a> and fill out the application form. Our partnership
+                  team will review your application and contact you within 48 business hours to discuss terms, territory
+                  allocation, and onboarding.</div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#dl2">What is the minimum investment for
+                  dealership?</button></h2>
+              <div id="dl2" class="accordion-collapse collapse" data-bs-parent="#faqDealership">
+                <div class="accordion-body">The minimum investment to start as a V-Premix Tea dealer is
+                  <strong>₹50,000</strong>, which covers your initial stock. There is no franchise fee or royalty.
+                  Dealers earn margins of 30–40% depending on the product variant and order volume.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#dl3">Do you provide marketing support to dealers?</button>
+              </h2>
+              <div id="dl3" class="accordion-collapse collapse" data-bs-parent="#faqDealership">
+                <div class="accordion-body">Yes, all enrolled dealers receive: product brochures, point-of-sale display
+                  materials, branded samples for distribution, digital marketing assets, and a dedicated relationship
+                  manager. We also run joint promotional campaigns for high-performing dealers.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 text-center">
+            <h5 class="font-serif fw-bold mb-2" style="color:var(--primary)">Still have questions?</h5>
+            <p class="text-muted small mb-3">Our team is happy to assist with any queries not covered here.</p>
+            <div class="d-flex gap-3 justify-content-center">
+              <a href="./contact.html" class="btn btn-gold fw-bold px-4">Contact Us</a>
+              <a href="https://wa.me/919000000000" target="_blank" class="btn btn-outline-success fw-bold px-4"
+                style="border-color:var(--primary);color:var(--primary)"><i
+                  class="fab fa-whatsapp me-1"></i>WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="footer-brand font-serif">V-Premix Tea</span>
+          </div>
+          <p class="small" style="color:#999;line-height:1.7">Premium Tea Premix | Made in India. Supplying quality tea
+            premixes to across the nation since 2025.</p>
+          <div class="footer-social mt-3 d-flex gap-2">
+            <a href="https://wa.me/916352369851?text=Hello, I'm interested in your products." target="_blank"><i
+                class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading mb-3">Quick Links</h6>
+          <a href="./index.html" class="footer-link">Home</a>
+          <a href="./about.html" class="footer-link">About Us</a>
+          <a href="./products.html" class="footer-link">Products</a>
+          <a href="./shop.html" class="footer-link">Shop</a>
+          <a href="./gallery.html" class="footer-link">Gallery</a>
+          <a href="./faq.html" class="footer-link">FAQ</a>
+          <a href="./contact.html" class="footer-link">Contact</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="footer-heading mb-3">Contact Info</h6>
+          <p class="small mb-2" style="color:#999"><i class="fas fa-map-marker-alt text-gold me-2"></i>Surat,
+            Gujarat, India</p>
+          <a href="tel:+916352369851">
+            <p class="small mb-2" style="color:#999"><i class="fas fa-phone text-gold me-2"></i>+91 63523 69851</p>
+          </a>
+          <a
+            href="mailto:vpremixtea@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20V-Premix%20Tea,%0A%0AI%20would%20like%20to%20know%20about...">
+            <p class="small mb-2" style="color:#999">
+              <i class="fas fa-envelope text-gold me-2"></i>
+              vpremixtea@gmail.com
+            </p>
+          </a>
+          <p class="small mt-3" style="color:#666;font-size:.75rem">GST: 27XXXXX1234X1ZX<br>FSSAI: 11524999000XXX</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading mb-3">Newsletter</h6>
+          <p class="small mb-3" style="color:#999">Stay updated with our latest products and exclusive offers.Join our
+            Whatsapp Channel now!</p>
+          <form onsubmit="subscribeNewsletter(event)" class="d-flex flex-column gap-2">
+            <button type="submit" class="btn btn-gold btn-sm fw-bold">Join WhatsApp Channel</button>
+          </form>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>&copy; 2026 V-Premix Tea. All Rights Reserved.</span>
+        <div class="col-lg-3 col-md-6">
+          <p class="small mb-2" style="color:#999">Created &amp; Managed by: </p>
+          <h6 class="footer-heading mb-3">Jaydeep Pramanik</h6>
+        </div>
+        <div class="d-flex gap-3">
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button id="waFloatBtn" onclick="toggleWaPopup()" class="whatsapp-float" style="position:relative">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-notif-dot" style="display:none"></span>
+  </button>
+
+  <!-- WHATSAPP CHAT POPUP -->
+  <div id="waPopup" class="wa-popup">
+    <div class="wa-popup-header">
+      <div class="wa-popup-avatar"><i class="fab fa-whatsapp"></i></div>
+      <div>
+        <div class="wa-popup-name">V-Premix Tea</div>
+        <div class="wa-popup-status">🟢 Typically replies within 24 hour</div>
+      </div>
+      <button class="wa-popup-close-btn" onclick="closeWaPopup()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wa-popup-body">
+      <div class="wa-bubble">👋 Hi! How can we help you today? Choose a quick option or type your message below.</div>
+      <div class="wa-quick-btns">
+        <button class="wa-quick-btn"
+          onclick="waQuickMessage('Hi! I want to get a bulk price quote for V-Premix Tea premix.')">💰 Get Bulk Price
+          Quote</button>
+        <button class="wa-quick-btn"
+          onclick="waQuickMessage('I would like to enquire about dealership or distributorship.')">🤝 Dealership
+          Enquiry</button>
+        <button class="wa-quick-btn"
+          onclick="waQuickMessage('I need a product sample to test before ordering in bulk.')">📦 Request a Free
+          Sample</button>
+        <button class="wa-quick-btn" onclick="waQuickMessage('I have a question about my existing order.')">📋 Order
+          Support</button>
+      </div>
+      <div class="wa-input-row">
+        <input id="waCustomInput" class="wa-input" type="text" placeholder="Type your message..." />
+        <button class="wa-send-btn" onclick="waSendCustom()"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieBanner" class="cookie-banner" style="display:none">
+    <p>🍪 We use cookies to enhance your browsing experience and analyze site traffic. By continuing, you agree to our
+      <a href="./privacy-policy.html">Privacy Policy</a>.
+    </p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-decline" onclick="declineCookies()">Decline</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/shop.js"></script>
+  
+</body>
+
+</html>

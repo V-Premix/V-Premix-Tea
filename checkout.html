@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/images/WhatsApp Image 2026-05-31 at 8.05.31 PM.jpeg" />
+  <title>Checkout | V-Premix Tea</title>
+  <meta name="description"
+    content="Secure checkout for V-Premix Tea — Pay via UPI, Credit/Debit Card, Net Banking, or Bank Transfer." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <div id="scrollProgress" class="scroll-progress"></div>
+
+  <div class="loading-screen" id="loadingScreen">
+    <div class="logo">
+      <img src="./assets/images/WhatsApp Image 2026-05-31 at 8.05.31 PM.jpeg" alt="V-Premix Logo">
+    </div>
+    <h4 class="font-serif" style="color:var(--primary)">V-Premix Tea</h4>
+    <div class="loading-progress-bar">
+      <div class="loading-progress-fill"></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 font-serif" href="./index.html">
+        <div class="logo">
+          <img src="./assets/images/WhatsApp Image 2026-05-31 at 8.05.31 PM.jpeg" alt="V-Premix Logo">
+        </div>V-Premix Tea
+      </a>
+      <div class="ms-auto d-flex align-items-center gap-3">
+        <span class="text-muted small d-none d-md-inline"><i class="fas fa-lock text-gold me-1"></i>Secure
+          Checkout</span>
+        <a href="./shop.html" class="btn btn-outline-secondary btn-sm"><i class="fas fa-arrow-left me-1"></i>Back to
+          Shop</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CHECKOUT BODY -->
+  <div style="padding-top:80px;min-height:100vh;background:var(--body-bg)">
+    <div class="container py-5">
+
+      <!-- Steps indicator -->
+      <div class="checkout-steps mb-5">
+        <div class="checkout-step done">
+          <div class="step-num"><i class="fas fa-check"></i></div>
+          <div class="step-label">Cart</div>
+        </div>
+        <div class="checkout-step-line"></div>
+        <div class="checkout-step active">
+          <div class="step-num">2</div>
+          <div class="step-label">Details</div>
+        </div>
+        <div class="checkout-step-line"></div>
+        <div class="checkout-step">
+          <div class="step-num">3</div>
+          <div class="step-label">Payment</div>
+        </div>
+        <div class="checkout-step-line"></div>
+        <div class="checkout-step">
+          <div class="step-num">4</div>
+          <div class="step-label">Confirm</div>
+        </div>
+      </div>
+
+      <div class="row g-3">
+
+        <!-- LEFT: Form + Payment -->
+        <div class="col-lg-7">
+
+          <!-- Empty cart state -->
+          <div id="emptyCartNotice" class="text-center py-5" style="display:none">
+            <i class="fas fa-shopping-basket fa-4x mb-4 text-muted"></i>
+            <h4 class="font-serif">Your cart is empty</h4>
+            <p class="text-muted">Add some products before checking out.</p>
+            <a href="./shop.html" class="btn btn-gold px-5 fw-bold">Go to Shop</a>
+          </div>
+
+          <div id="checkoutForm">
+            <!-- BILLING DETAILS -->
+            <div class="checkout-section-card mb-4">
+              <h5 class="font-serif fw-bold mb-4 section-heading"><i class="fas fa-user me-2 text-gold"></i>Billing
+                Details</h5>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label">Full Name *</label>
+                  <input type="text" class="form-control" id="billName" placeholder="Your full name" required />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Business Name</label>
+                  <input type="text" class="form-control" id="billBusiness" placeholder="Cafe / Company (optional)" />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Phone Number *</label>
+                  <div class="input-group">
+                    <span class="input-group-text">+91</span>
+                    <input type="tel" class="form-control" id="billPhone" placeholder="10-digit number" maxlength="10"
+                      required />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" id="billEmail" placeholder="your@email.com" required />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Delivery Address *</label>
+                  <textarea class="form-control" id="billAddress" rows="2" placeholder="House / Shop No., Street, Area"
+                    required></textarea>
+                </div>
+                <div class="col-sm-4">
+                  <label class="form-label">City *</label>
+                  <input type="text" class="form-control" id="billCity" placeholder="City" required />
+                </div>
+                <div class="col-sm-4">
+                  <label class="form-label">State *</label>
+                  <select class="form-select" id="billState" required>
+                    <option value="">Select State</option>
+                    <option>Maharashtra</option>
+                    <option>Delhi</option>
+                    <option>Karnataka</option>
+                    <option>Tamil Nadu</option>
+                    <option>Gujarat</option>
+                    <option>Rajasthan</option>
+                    <option>Uttar Pradesh</option>
+                    <option>West Bengal</option>
+                    <option>Telangana</option>
+                    <option>Kerala</option>
+                    <option>Punjab</option>
+                    <option>Haryana</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Bihar</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <label class="form-label">PIN Code *</label>
+                  <input type="text" class="form-control" id="billPin" placeholder="6-digit PIN" maxlength="6"
+                    required />
+                </div>
+                <div id="deliveryEstimate" class="small mt-2 text-success"></div>
+              </div>
+            </div>
+            <!-- PLACE ORDER BUTTON -->
+            <button class="btn btn-gold w-100 py-3 fw-bold place-order-btn mt-2" id="placeOrderBtn" onclick="payNow()"
+              disabled>
+              <i class="fas fa-lock me-2"></i>Place Order Securely
+            </button>
+            <button class="btn btn-success w-100 py-3 fw-bold mt-2" id="codBtn" onclick="placeCODOrder()">
+              <i class="fas fa-money-bill-wave me-2"></i>Cash on Delivery
+            </button>
+            <p class="text-center text-muted mt-3" style="font-size:.78rem"><i
+                class="fas fa-shield-halved text-gold me-1"></i>256-bit SSL Encrypted &middot; Your data is 100% safe
+              &middot; FSSAI Certified Products</p>
+
+          </div><!-- /#checkoutForm -->
+        </div><!-- /col-lg-7 -->
+
+        <!-- RIGHT: Order Summary -->
+        <div class="col-lg-3">
+          <div class="order-summary-card">
+            <h5 class="font-serif fw-bold mb-4 section-heading"><i class="fas fa-receipt me-2 text-gold"></i>Order
+              Summary</h5>
+
+            <!-- Cart Items -->
+            <div id="orderItems">
+              <!-- rendered by JS -->
+            </div>
+
+            <!-- Price Breakdown -->
+            <div class="price-breakdown">
+              <div class="price-row"><span>Subtotal</span><span id="summarySubtotal">₹0</span></div>
+              <div class="price-row" id="discountRow" style="display:none"><span
+                  class="text-success">Discount</span><span class="text-success" id="summaryDiscount">-₹0</span></div>
+              <div class="price-row"><span>Delivery Charges</span><span id="summaryDelivery"
+                  class="text-success">FREE</span></div>
+              <div class="price-row total-row">
+                <span class="fw-bold fs-5" style="color:var(--primary)">Total Payable</span>
+                <span class="fw-bold fs-5" style="color:var(--primary)" id="summaryTotal">₹0</span>
+              </div>
+            </div>
+
+            <!-- Payment icons -->
+            <div class="text-center mt-4">
+              <p class="text-muted small mb-2">We accept</p>
+              <div class="accepted-payments">
+                <span title="UPI"><i class="fas fa-mobile-alt"></i> UPI</span>
+                <span title="Visa"><i class="fab fa-cc-visa"></i></span>
+                <span title="Mastercard"><i class="fab fa-cc-mastercard"></i></span>
+                <span title="Net Banking"><i class="fas fa-university"></i> NetBanking</span>
+                <span title="NEFT"><i class="fas fa-building-columns"></i> NEFT</span>
+                <span title="COD"><i class="fas fa-money-bill"></i> COD</span>
+              </div>
+            </div>
+
+            <!-- Secure badges -->
+            <div class="d-flex justify-content-center gap-4 mt-3 pt-3 border-top">
+              <div class="text-center"><i class="fas fa-lock text-gold mb-1 d-block"></i><span
+                  style="font-size:.7rem;color:var(--text-muted)">SSL Secured</span></div>
+              <div class="text-center"><i class="fas fa-award text-gold mb-1 d-block"></i><span
+                  style="font-size:.7rem;color:var(--text-muted)">FSSAI Certified</span></div>
+              <div class="text-center"><i class="fas fa-rotate-left text-gold mb-1 d-block"></i><span
+                  style="font-size:.7rem;color:var(--text-muted)">7-Day Returns</span></div>
+            </div>
+
+            <!-- Need help -->
+            <div class="mt-4 p-4 rounded-4 text-center glass-card"
+              style="background:rgba(15,81,50,0.08); border:1px solid rgba(212,175,55,0.2);">
+
+              <h5 class="fw-bold mb-2" style="color:var(--primary);">
+                Order Cancellation
+              </h5>
+
+              <p class="small text-muted mb-3">
+                Already placed an order? Submit a cancellation request instantly.
+              </p>
+
+              <button id="cancelOrderBtn" onclick="openCancelModal()" class="btn fw-bold px-4 py-2"
+                style="background:#dc3545;border:none;border-radius:50px;color:white;box-shadow:0 8px 20px rgba(220,53,69,0.25);transition:0.3s;">
+                <i class="fas fa-times-circle me-2"></i>
+                Cancel Order
+              </button>
+
+            </div>
+
+            <!-- Modal -->
+            <div id="cancelModal" class="cancel-modal">
+
+              <div class="cancel-box">
+
+                <div class="text-center mb-3">
+                  <div class="cancel-icon">
+                    <i class="fas fa-ban"></i>
+                  </div>
+
+                  <h4 class="fw-bold mt-3" style="color:var(--primary)">
+                    Cancel Your Order
+                  </h4>
+
+                  <p class="small text-muted mb-0">
+                    Enter your Order ID and reason for cancellation.
+                  </p>
+                </div>
+
+                <label class="form-label fw-semibold">Order ID</label>
+                <input type="text" id="orderId" class="form-control mb-3" placeholder="e.g. #VPT123456">
+
+                <label class="form-label fw-semibold">Phone Number</label>
+                <input type="text" id="cancelPhone" class="form-control mb-3" placeholder="Mobile Number">
+
+                <label class="form-label fw-semibold">Reason</label>
+                <select id="cancelReason" class="form-select mb-4">
+
+                  <option value="Ordered by mistake">
+                    Ordered by mistake
+                  </option>
+
+                  <option value="Found a better price elsewhere">
+                    Found a better price elsewhere
+                  </option>
+
+                  <option value="Want to change quantity/product">
+                    Want to change quantity/product
+                  </option>
+
+                  <option value="Delivery taking too long">
+                    Delivery taking too long
+                  </option>
+
+                  <option value="Shipping charges are too high">
+                    Shipping charges are too high
+                  </option>
+
+                  <option value="Placed duplicate order">
+                    Placed duplicate order
+                  </option>
+
+                  <option value="Payment issue">
+                    Payment issue
+                  </option>
+
+                  <option value="Address entered incorrectly">
+                    Address entered incorrectly
+                  </option>
+
+                  <option value="No longer needed">
+                    No longer needed
+                  </option>
+
+                  <option value="Other">
+                    Other
+                  </option>
+
+                </select>
+
+                <textarea id="otherReason" class="form-control mt-2" placeholder="Please specify reason"
+                  style="display:none"></textarea>
+
+                <button onclick="sendCancelRequest()" class="btn w-100 mb-2 fw-bold"
+                  style="background:#25D366;color:white;border:none;">
+                  <i class="fab fa-whatsapp me-2"></i>
+                  Send via WhatsApp
+                </button>
+
+                <button onclick="closeCancelModal()" class="btn btn-outline-secondary w-100">
+                  Close
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS MODAL -->
+  <div class="modal fade" id="orderSuccessModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius:20px;border:none;overflow:hidden">
+        <div class="modal-body text-center p-5">
+          <div class="success-anim mb-4">
+            <div class="success-circle"><i class="fas fa-check"></i></div>
+          </div>
+          <h4 class="font-serif fw-bold mb-2" style="color:var(--primary)">Order Placed Successfully! 🎉</h4>
+          <p class="text-muted mb-1">Thank you for your order.</p>
+          <p class="text-muted small mb-4">Order ID: <strong id="successOrderId">#VPT00001</strong></p>
+          <div class="alert alert-success py-2 small text-start mb-4">
+            <h4 class="text-danger fw-bold mt-2">
+              *Please save your Order ID for cancellation.*
+            </h4>
+          </div>
+          <p class="text-muted small mb-4">Our team will verify your payment within <strong>24
+              hours</strong>.</p>
+          <a href="./shop.html" class="btn btn-gold fw-bold px-5 me-2">Continue Shopping</a>
+          <a href="./index.html" class="btn btn-outline-secondary fw-bold px-4">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer pt-4 pb-3">
+    <div class="container">
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>&copy; 2026 V-Premix Tea. All Rights Reserved.</span>
+        <div class="col-lg-3 col-md-6">
+          <p class="small mb-2" style="color:#999">Created &amp; Managed by: </p>
+          <h6 class="footer-heading mb-3">Jaydeep Pramanik</h6>
+        </div>
+        <div class="d-flex gap-3">
+          <a href="./privacy-policy.html" class="footer-bottom">Privacy Policy</a>
+          <a href="./terms.html" class="footer-bottom">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieBanner" class="cookie-banner" style="display:none">
+    <p>🍪 We use cookies to enhance your browsing experience. By continuing, you agree to our <a
+        href="./privacy-policy.html">Privacy Policy</a>.</p>
+    <div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Accept All</button><button
+        class="cookie-decline" onclick="declineCookies()">Decline</button></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/shop.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>// Modal open karne ke liye 
+    function openCancelModal() {
+      document.getElementById('cancelModal').style.display = 'block';
+    }
+
+    // Modal close karne ke liye 
+    function closeCancelModal() {
+      document.getElementById('cancelModal').style.display = 'none';
+    }
+
+    // WhatsApp par cancel message bhejne ke liye 
+    function sendCancelRequest() {
+
+      var orderId = document.getElementById('orderId').value;
+      var reason =
+        document.getElementById("cancelReason").value;
+
+      if (reason === "Other") {
+        reason =
+          document.getElementById("otherReason").value;
+
+        if (reason.trim() === "") {
+          alert("Please enter your reason.");
+          return;
+        }
+      }
+
+      if (orderId.trim() === "") {
+        alert("Please enter your Order ID.");
+        return;
+      }
+
+      var myPhoneNumber = "916352369851";
+
+      var phone =
+        document.getElementById("cancelPhone").value;
+
+      var message =
+        "Order Cancel Request\n\n" +
+        "Order ID: " + orderId + "\n" +
+        "Phone: " + phone + "\n" +
+        "Reason: " + reason;
+
+      var whatsappUrl =
+        "https://wa.me/" +
+        myPhoneNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+      window.open(whatsappUrl, "_blank");
+
+      closeCancelModal();
+    } </script>
+  
+</body>
+
+</html>

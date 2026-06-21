@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../assets/images/WhatsApp Image 2026-05-31 at 8.05.31 PM.jpeg" />
+  <title>Lemon Tea Premix | V-Premix Tea</title>
+  <meta name="description"
+    content="V-Premix Lemon Tea Premix — zesty citrus flavor, FSSAI certified, refreshing B2B bulk supply in 500g to 25kg packaging." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <div id="scrollProgress" class="scroll-progress"></div>
+  <!-- ANNOUNCEMENT BAR -->
+  <div id="announcementBar" class="announcement-bar">
+    <div class="container">
+      <span><i class="fas fa-gift me-2" style="color:var(--secondary)"></i><strong>Limited Offer:</strong> Orders above
+        100kg/month get <strong>FREE custom branding on packaging!</strong> <a href="../contact.html"
+          class="text-gold fw-bold ms-2">Enquire Now →</a></span>
+      <button class="announcement-close" onclick="dismissAnnouncement()" title="Dismiss"><i
+          class="fas fa-times"></i></button>
+    </div>
+  </div>
+
+  <div class="loading-screen" id="loadingScreen">
+    <div class="logo">
+      <img src="../assets/images/WhatsApp Image 2026-05-31 at 8.05.31 PM.jpeg" alt="V-Premix Logo">
+    </div>
+    <h4 class="font-serif" style="color:var(--primary)">V-Premix Tea</h4>
+    <div class="loading-progress-bar">
+      <div class="loading-progress-fill"></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 font-serif" href="./index.html">
+        <div class="logo">
+          <img src="../assets/images/WhatsApp Image 2026-05-31 at 8.05.31 PM.jpeg" alt="V-Premix Logo">
+        </div>V-Premix Tea
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" href="../products.html"
+              data-bs-toggle="dropdown">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./masala-tea.html">Masala Tea Premix</a></li>
+              <li><a class="dropdown-item" href="./ginger-tea.html">Ginger Tea Premix</a></li>
+              <li><a class="dropdown-item" href="./elaichi-tea.html">Elaichi Tea Premix</a></li>
+              <li><a class="dropdown-item" href="./green-tea.html">Green Tea Premix</a></li>
+              <li><a class="dropdown-item fw-bold" href="./lemon-tea.html">Lemon Tea Premix</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../shop.html"><i class="fas fa-store me-1"></i>Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="../gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="../faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link position-relative cart-nav-btn" href="../checkout.html"
+              id="cartNavBtn" title="View Cart"><i class="fas fa-shopping-basket"></i><span class="cart-badge"
+                id="cartBadge" style="display:none">0</span></a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-gold btn-sm px-3 fw-bold btn-get-quote"
+              href="../contact.html">Get Quote</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="product-hero-banner" style="background:linear-gradient(135deg,#7d6608 0%,#b59a0a 60%,#5a4a06 100%)">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-3">
+          <li class="breadcrumb-item"><a href="../index.html" style="color:var(--secondary)">Home</a></li>
+          <li class="breadcrumb-item"><a href="../products.html" style="color:var(--secondary)">Products</a></li>
+          <li class="breadcrumb-item active" style="color:rgba(255,255,255,.6)">Lemon Tea</li>
+        </ol>
+      </nav>
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge-fssai mb-3 d-inline-block">Refreshing</span>
+          <h1 class="font-serif fw-bold text-white mb-3" style="font-size:2.8rem">Lemon Tea Premix</h1>
+          <p class="mb-4" style="color:rgba(255,255,255,.82);font-size:1.1rem">Zesty Citrus Refreshment — Tangy,
+            invigorating, and naturally uplifting. A crowd-pleaser for warm-weather menus and all-day refreshment.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <span class="badge-fssai"><i class="fas fa-award me-1"></i>FSSAI Certified</span>
+            <span class="badge-fssai"><i class="fas fa-lemon me-1"></i>Real Lemon Extract</span>
+            <span class="badge-fssai"><i class="fas fa-snowflake me-1"></i>Serve Hot or Cold</span>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="rounded-4 mx-auto d-flex align-items-center justify-content-center"
+            style="width:280px;height:280px;background:rgba(255,255,255,0.08);border:2px solid rgba(255,255,255,0.15)">
+            <i class="fas fa-lemon fa-8x" style="color:rgba(255,255,255,0.3)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-5 bg-cream">
+    <div class="container py-4">
+      <div class="row g-3">
+        <div class="col-lg-8">
+          <ul class="nav tab-nav-custom mb-4">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab"
+                data-bs-target="#lt-overview">Overview</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                data-bs-target="#lt-ingredients">Ingredients</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                data-bs-target="#lt-preparation">Preparation</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                data-bs-target="#lt-packaging">Packaging</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="lt-overview">
+              <h4 class="font-serif fw-bold mb-3" style="color:var(--primary)">Product Overview</h4>
+              <p class="text-muted mb-4">V-Premix Lemon Tea combines the refreshing zest of real lemon extract with a
+                lightly sweetened tea base. The result is a balanced, tangy, and invigorating beverage that works
+                perfectly across seasons — served hot in winter or over ice in summer.</p>
+              <p class="text-muted mb-4">Lemon tea is one of the fastest-growing menu categories in cafes, restaurants,
+                and corporate pantries. Our premix makes it incredibly easy to serve consistently excellent lemon tea at
+                scale.</p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="glass-card p-3">
+                    <div class="fw-bold text-gold">80 cups</div>
+                    <div class="text-muted small">per 1kg (hot)</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="glass-card p-3">
+                    <div class="fw-bold text-gold">Hot or Iced</div>
+                    <div class="text-muted small">versatile serving</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="glass-card p-3">
+                    <div class="fw-bold text-gold">12 months</div>
+                    <div class="text-muted small">shelf life</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="glass-card p-3">
+                    <div class="fw-bold text-gold">Real</div>
+                    <div class="text-muted small">lemon extract</div>
+                  </div>
+                </div>
+              </div>
+              <h5 class="fw-bold mb-3" style="color:var(--primary)">Key Benefits</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i>Real lemon extract — authentic citrus
+                  flavor</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i>Serves both hot and iced — maximum
+                  menu flexibility</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i>Natural source of Vitamin C</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i>Low in calories compared to
+                  masala/ginger variants</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i>Perfect for summer seasonal menus
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="lt-ingredients">
+              <h4 class="font-serif fw-bold mb-3" style="color:var(--primary)">Ingredients</h4>
+              <div class="mb-4">
+                <span class="ingredient-tag">Black Tea Extract</span>
+                <span class="ingredient-tag">Sugar</span>
+                <span class="ingredient-tag">Lemon Extract (4%)</span>
+                <span class="ingredient-tag">Citric Acid (Natural)</span>
+                <span class="ingredient-tag">Vitamin C</span>
+              </div>
+              <div class="glass-card p-4">
+                <h6 class="fw-bold mb-2" style="color:var(--primary)">Nutrition (per 14g serving)</h6>
+                <table class="table table-sm table-borderless mb-0">
+                  <tr>
+                    <td class="text-muted small">Energy</td>
+                    <td class="fw-semibold small">45 kcal</td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted small">Carbohydrates</td>
+                    <td class="fw-semibold small">9g</td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted small">Vitamin C</td>
+                    <td class="fw-semibold small">Present</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="lt-preparation">
+              <h4 class="font-serif fw-bold mb-4" style="color:var(--primary)">How to Prepare</h4>
+              <h6 class="fw-bold text-gold mb-3">Hot Version</h6>
+              <div class="prep-step">
+                <div class="prep-num">1</div>
+                <div><strong>Measure</strong> — Take 14g (1 tablespoon) of V-Premix Lemon Tea.</div>
+              </div>
+              <div class="prep-step">
+                <div class="prep-num">2</div>
+                <div><strong>Heat</strong> — Bring 100ml of water to 85°C.</div>
+              </div>
+              <div class="prep-step">
+                <div class="prep-num">3</div>
+                <div><strong>Mix &amp; Serve</strong> — Stir premix into hot water and serve immediately.</div>
+              </div>
+              <h6 class="fw-bold text-gold mb-3 mt-4">Iced Version</h6>
+              <div class="prep-step">
+                <div class="prep-num">1</div>
+                <div>Dissolve 16g of premix in 60ml hot water.</div>
+              </div>
+              <div class="prep-step">
+                <div class="prep-num">2</div>
+                <div>Pour over a glass filled with ice cubes.</div>
+              </div>
+              <div class="prep-step">
+                <div class="prep-num">3</div>
+                <div>Top with 80ml cold water. Stir and serve with a lemon slice.</div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="lt-packaging">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="glass-card p-4 text-center"><i class="fas fa-box text-gold fa-2x mb-2"></i>
+                    <div class="fw-bold" style="color:var(--primary)">500g Pouch</div>
+                    <div class="text-muted small">~40 cups</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="glass-card p-4 text-center"><i class="fas fa-box-open text-gold fa-2x mb-2"></i>
+                    <div class="fw-bold" style="color:var(--primary)">1kg Pouch</div>
+                    <div class="text-muted small">~80 cups</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="glass-card p-4 text-center"><i class="fas fa-cube text-gold fa-2x mb-2"></i>
+                    <div class="fw-bold" style="color:var(--primary)">5kg Box</div>
+                    <div class="text-muted small">~400 cups</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="glass-card p-4 text-center"><i class="fas fa-warehouse text-gold fa-2x mb-2"></i>
+                    <div class="fw-bold" style="color:var(--primary)">25kg Sack</div>
+                    <div class="text-muted small">~2000 cups</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5">
+            <h4 class="font-serif fw-bold mb-3" style="color:var(--primary)">Product Specifications</h4>
+            <table class="table spec-table">
+              <tbody>
+                <tr>
+                  <th>Product Name</th>
+                  <td>V-Premix Lemon Tea</td>
+                </tr>
+                <tr>
+                  <th>Net Weight</th>
+                  <td>1 kg (Standard)</td>
+                </tr>
+                <tr>
+                  <th>Shelf Life</th>
+                  <td>12 Months</td>
+                </tr>
+                <tr>
+                  <th>Storage</th>
+                  <td>Cool, dry place</td>
+                </tr>
+                <tr>
+                  <th>FSSAI License</th>
+                  <td>11524999000XXX</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- INQUIRY SIDEBAR -->
+        <div class="col-lg-4">
+          <div class="sticky-inquiry">
+            <div class="glass-card p-4 mb-4">
+              <h5 class="font-serif fw-bold mb-1" style="color:var(--primary)">Request a Quote</h5>
+              <p class="text-muted small mb-4">Fill in your details and our sales team will send you the best pricing
+                within 24 hours.</p>
+              <form onsubmit="handleInquiryForm(event)">
+                <div class="mb-3"><label class="form-label">Your Name *</label><input type="text" class="form-control"
+                    placeholder="Full name" required></div>
+                <div class="mb-3"><label class="form-label">Business Name *</label><input type="text"
+                    class="form-control" placeholder="Company / Cafe name" required></div>
+                <div class="mb-3"><label class="form-label">Phone *</label><input type="tel" class="form-control"
+                    placeholder="+91 XXXXX XXXXX" required></div>
+                <div class="mb-3">
+                  <label class="form-label">Quantity Required</label>
+                  <select class="form-select">
+                    <option>5–20 kg / month</option>
+                    <option>20–50 kg / month</option>
+                    <option>50–200 kg / month</option>
+                    <option>200+ kg / month</option>
+                  </select>
+                </div>
+                <div class="mb-3"><label class="form-label">Message</label><textarea class="form-control" rows="2"
+                    placeholder="Any specific requirements..."></textarea></div>
+                <button type="submit" class="btn btn-gold fw-bold w-100 py-2">Get Best Price <i
+                    class="fas fa-arrow-right ms-1"></i></button>
+              </form>
+            </div>
+            <a href="https://wa.me/919000000000?text=Hi!%20I%20want%20to%20enquire%20about%20Lemon%20Tea%20Premix."
+              target="_blank" class="d-block text-decoration-none mb-3">
+              <div class="p-3 rounded-3 d-flex align-items-center gap-3" style="background:#25D366;color:white"><i
+                  class="fab fa-whatsapp fa-2x"></i>
+                <div>
+                  <div class="fw-bold">WhatsApp Enquiry</div>
+                  <div class="small" style="opacity:.85">Response within 1 hour</div>
+                </div>
+              </div>
+            </a>
+            <div class="glass-card p-3 text-center">
+              <div class="text-muted small mb-2">Other variants</div>
+              <div class="d-flex flex-wrap gap-2 justify-content-center"><a href="./masala-tea.html"
+                  class="btn btn-outline-secondary btn-sm">Masala</a><a href="./ginger-tea.html"
+                  class="btn btn-outline-secondary btn-sm">Ginger</a><a href="./elaichi-tea.html"
+                  class="btn btn-outline-secondary btn-sm">Elaichi</a><a href="./green-tea.html"
+                  class="btn btn-outline-secondary btn-sm">Green</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="footer-brand font-serif">V-Premix Tea</span>
+          </div>
+          <p class="small" style="color:#999;line-height:1.7">Premium Tea Premix | Made in India. Supplying quality tea
+            premixes to across the nation since 2025.</p>
+          <div class="footer-social mt-3 d-flex gap-2">
+            <a href="https://wa.me/916352369851?text=Hello, I'm interested in your products." target="_blank"><i
+                class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading mb-3">Quick Links</h6>
+          <a href="../index.html" class="footer-link">Home</a>
+          <a href="../about.html" class="footer-link">About Us</a>
+          <a href="../products.html" class="footer-link">Products</a>
+          <a href="../shop.html" class="footer-link">Shop</a>
+          <a href="../gallery.html" class="footer-link">Gallery</a>
+          <a href="../faq.html" class="footer-link">FAQ</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="footer-heading mb-3">Contact Info</h6>
+          <p class="small mb-2" style="color:#999"><i class="fas fa-map-marker-alt text-gold me-2"></i>Surat,
+            Gujarat, India</p>
+          <a href="tel:+916352369851">
+            <p class="small mb-2" style="color:#999"><i class="fas fa-phone text-gold me-2"></i>+91 63523 69851</p>
+          </a>
+          <a
+            href="mailto:vpremixtea@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20V-Premix%20Tea,%0A%0AI%20would%20like%20to%20know%20about...">
+            <p class="small mb-2" style="color:#999">
+              <i class="fas fa-envelope text-gold me-2"></i>
+              vpremixtea@gmail.com
+            </p>
+          </a>
+          <p class="small mt-3" style="color:#666;font-size:.75rem">GST: 27XXXXX1234X1ZX<br>FSSAI: 11524999000XXX</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading mb-3">Newsletter</h6>
+          <p class="small mb-3" style="color:#999">Stay updated with our latest products and exclusive offers.Join our
+            Whatsapp Channel now!</p>
+          <form onsubmit="subscribeNewsletter(event)" class="d-flex flex-column gap-2">
+            <button type="submit" class="btn btn-gold btn-sm fw-bold">Join WhatsApp Channel</button>
+          </form>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>&copy; 2026 V-Premix Tea. All Rights Reserved.</span>
+        <div class="col-lg-3 col-md-6">
+          <p class="small mb-2" style="color:#999">Created &amp; Managed by: </p>
+          <h6 class="footer-heading mb-3">Jaydeep Pramanik</h6>
+        </div>
+        <div class="d-flex gap-3">
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button id="waFloatBtn" onclick="toggleWaPopup()" class="whatsapp-float" style="position:relative">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-notif-dot" style="display:none"></span>
+  </button>
+
+  <!-- WHATSAPP CHAT POPUP -->
+  <div id="waPopup" class="wa-popup">
+    <div class="wa-popup-header">
+      <div class="wa-popup-avatar"><i class="fab fa-whatsapp"></i></div>
+      <div>
+        <div class="wa-popup-name">V-Premix Tea</div>
+        <div class="wa-popup-status">🟢 Typically replies within 24 hour</div>
+      </div>
+      <button class="wa-popup-close-btn" onclick="closeWaPopup()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wa-popup-body">
+      <div class="wa-bubble">👋 Hi! How can we help you today? Choose a quick option or type your message below.</div>
+      <div class="wa-quick-btns">
+        <button class="wa-quick-btn"
+          onclick="waQuickMessage('Hi! I want to get a bulk price quote for V-Premix Tea premix.')">💰 Get Bulk Price
+          Quote</button>
+        <button class="wa-quick-btn"
+          onclick="waQuickMessage('I would like to enquire about dealership or distributorship.')">🤝 Dealership
+          Enquiry</button>
+        <button class="wa-quick-btn"
+          onclick="waQuickMessage('I need a product sample to test before ordering in bulk.')">📦 Request a Free
+          Sample</button>
+        <button class="wa-quick-btn" onclick="waQuickMessage('I have a question about my existing order.')">📋 Order
+          Support</button>
+      </div>
+      <div class="wa-input-row">
+        <input id="waCustomInput" class="wa-input" type="text" placeholder="Type your message..." />
+        <button class="wa-send-btn" onclick="waSendCustom()"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieBanner" class="cookie-banner" style="display:none">
+    <p>🍪 We use cookies to enhance your browsing experience and analyze site traffic. By continuing, you agree to our
+      <a href="../privacy-policy.html">Privacy Policy</a>.
+    </p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-decline" onclick="declineCookies()">Decline</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/shop.js"></script>
+  
+</body>
+
+</html>

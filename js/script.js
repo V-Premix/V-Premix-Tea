@@ -332,7 +332,7 @@ function closeWaPopup() {
 
 function waQuickMessage(msg) {
   const encoded = encodeURIComponent(msg);
-  window.open('https://wa.me/916352369851?text=' + encoded, '_blank');
+  window.location.href = 'https://wa.me/916352369851?text=' + encoded;
 }
 
 function waSendCustom() {

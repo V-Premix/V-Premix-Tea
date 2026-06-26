@@ -230,8 +230,8 @@ function subscribeNewsletter(e) {
 }
 function downloadBrochure() {
   const link = document.createElement("a");
-  link.href = "assets/pdf/V-Premix-Brochure.pdf"; // PDF ka path
-  link.download = "V-Premix-Brochure.pdf"; // Download hone wali file ka naam
+  link.href = "assets/pdf/Packaging Sticker.pdf"; // PDF ka path
+  link.download = "Packaging Sticker.pdf"; // Download hone wali file ka naam
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

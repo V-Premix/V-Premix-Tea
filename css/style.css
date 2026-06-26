@@ -3041,3 +3041,209 @@ textarea.form-control {
     font-size: 1.1rem !important;
   }
 }
+
+#preloader {
+
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #0f4229, #1f6b45, #e9dfc5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  overflow: hidden;
+
+}
+
+/* Floating Leaves */
+
+.tea-bg::before,
+.tea-bg::after {
+
+  content: "🍃";
+  position: absolute;
+  font-size: 40px;
+  opacity: .15;
+  animation: leaf 10s linear infinite;
+
+}
+
+.tea-bg::after {
+
+  left: 80%;
+  animation-delay: 4s;
+
+}
+
+@keyframes leaf {
+
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+
+  100% {
+
+    transform: translateY(110vh) rotate(360deg);
+
+  }
+
+}
+
+.loader-box {
+
+  text-align: center;
+  color: white;
+
+}
+
+.cup {
+
+  width: 120px;
+  height: 90px;
+  border: 5px solid #fff;
+  border-radius: 0 0 30px 30px;
+  margin: auto;
+  position: relative;
+
+}
+
+.cup::after {
+
+  content: "";
+  position: absolute;
+  right: -22px;
+  top: 18px;
+  width: 20px;
+  height: 35px;
+  border: 5px solid white;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+
+}
+
+.tea {
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 65%;
+  background: #9B5E2E;
+  border-radius: 0 0 25px 25px;
+
+}
+
+/* Steam */
+
+.steam {
+
+  position: absolute;
+  width: 10px;
+  height: 45px;
+  background: rgba(255, 255, 255, .35);
+  border-radius: 50%;
+  top: -40px;
+  animation: steam 3s infinite;
+
+}
+
+.steam1 {
+
+  left: 30px;
+
+}
+
+.steam2 {
+
+  left: 55px;
+  animation-delay: .8s;
+
+}
+
+.steam3 {
+
+  left: 80px;
+  animation-delay: 1.5s;
+
+}
+
+@keyframes steam {
+
+  0% {
+
+    opacity: 0;
+    transform: translateY(0) scale(.8);
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+  }
+
+  100% {
+
+    opacity: 0;
+    transform: translateY(-40px) scale(1.6);
+
+  }
+
+}
+
+.loader-box h1 {
+
+  margin-top: 10px;
+  font-size: 42px;
+  letter-spacing: 6px;
+  font-weight: 700;
+  color: #F6C453;
+
+}
+
+.loader-box h2 {
+
+  margin-top: 5px;
+  font-size: 18px;
+  color: #F6C453;
+  letter-spacing: 4px;
+
+}
+
+.loader-box p {
+
+  margin: 18px 0;
+  color: #eee;
+  font-size: 14px;
+  letter-spacing: 2px;
+
+}
+
+.progress {
+
+  width: 260px;
+  height: 7px;
+  background: rgba(255, 255, 255, .2);
+  margin: auto;
+  border-radius: 50px;
+  overflow: hidden;
+
+}
+
+.progress-fill {
+
+  height: 100%;
+  background: linear-gradient(90deg, #FFD54F, #FFE082, #FFF8E1);
+  width: 0;
+  animation: load 2.8s forwards;
+
+}
+
+@keyframes load {
+
+  100% {
+
+    width: 100%;
+
+  }
+
+}

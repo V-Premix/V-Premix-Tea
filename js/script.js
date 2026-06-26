@@ -4,16 +4,24 @@
    ======================================================== */
 
 /* ======================== LOADING ======================== */
-window.addEventListener('load', () => {
-  const ls = document.getElementById('loadingScreen');
-  if (ls) {
+window.addEventListener("load", () => {
+
+  const preloader = document.getElementById("preloader");
+
+  setTimeout(() => {
+
+    preloader.style.opacity = "0";
+    preloader.style.transition = ".8s";
+    preloader.style.visibility = "hidden";
+
     setTimeout(() => {
-      ls.classList.add('hidden');
-      setTimeout(() => ls.remove(), 400);
-    }, 600);
-  }
-  // Show cookie banner after load
-  initCookieBanner();
+
+      preloader.remove();
+
+    }, 800);
+
+  }, 2500);
+
 });
 
 /* ======================== SCROLL PROGRESS BAR ======================== */
@@ -221,7 +229,12 @@ function subscribeNewsletter(e) {
   e.target.reset();
 }
 function downloadBrochure() {
-  showToast('Our brochure will be sent to your WhatsApp shortly!');
+  const link = document.createElement("a");
+  link.href = "assets/pdf/V-Premix-Brochure.pdf"; // PDF ka path
+  link.download = "V-Premix-Brochure.pdf"; // Download hone wali file ka naam
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 /* ======================== FAQ SEARCH ======================== */

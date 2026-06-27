@@ -270,49 +270,62 @@ function filterGallery(btn, category) {
 }
 
 /* ======================== LIGHTBOX ======================== */
-let lightboxAll = [];
-let lightboxIdx = 0;
+const galleryItems = document.querySelectorAll(".gallery-item-wrap");
+let currentIndex = 0;
 
 function openLightbox(index) {
-  lightboxIdx = index;
-  const lb = document.getElementById('lightbox');
-  if (!lb) return;
-  lightboxAll = Array.from(document.querySelectorAll('.gallery-item-wrap:not([style*="none"])'));
-  refreshLightbox();
-  lb.classList.add('active');
-  document.body.style.overflow = 'hidden';
+
+  currentIndex = index;
+
+  const item = galleryItems[index];
+
+  const img = item.dataset.img;
+  const title = item.dataset.title;
+
+  document.querySelector(".lightbox-content").innerHTML = `
+        <img src="${img}" alt="${title}"
+        style="width:100%;height:100%;object-fit:contain;border-radius:15px;">
+    `;
+
+  document.querySelector(".lightbox-title").innerText = title;
+
+  document.getElementById("lightbox").classList.add("active");
+
 }
 
-function refreshLightbox() {
-  const lb = document.getElementById('lightbox');
-  const content = lb.querySelector('.lightbox-content');
-  const title = lb.querySelector('.lightbox-title');
-  const item = lightboxAll[lightboxIdx];
-  if (!item) return;
-  content.style.background = item.getAttribute('data-color') || 'linear-gradient(135deg, #0F5132, #1a3a2a)';
-  const t = item.getAttribute('data-title') || '';
-  if (title) title.textContent = t;
-  const icon = item.getAttribute('data-icon') || 'fa-mug-hot';
-  content.innerHTML = `<div style="text-align:center;color:rgba(255,255,255,0.4);font-size:5rem;"><i class="fas ${icon}"></i></div>`;
+function closeLightbox(){
+
+    document.getElementById("lightbox").classList.remove("active");
+
 }
 
-function closeLightbox() {
-  const lb = document.getElementById('lightbox');
-  if (lb) lb.classList.remove('active');
-  document.body.style.overflow = '';
-}
-function lightboxNext() { lightboxIdx = (lightboxIdx + 1) % lightboxAll.length; refreshLightbox(); }
-function lightboxPrev() { lightboxIdx = (lightboxIdx - 1 + lightboxAll.length) % lightboxAll.length; refreshLightbox(); }
+function lightboxNext(){
 
-document.addEventListener('keydown', e => {
-  const lb = document.getElementById('lightbox');
-  if (lb && lb.classList.contains('active')) {
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowRight') lightboxNext();
-    if (e.key === 'ArrowLeft') lightboxPrev();
-  }
-  if (e.key === 'Escape') closeWaPopup();
-});
+    currentIndex++;
+
+    if(currentIndex >= galleryItems.length){
+
+        currentIndex = 0;
+
+    }
+
+    openLightbox(currentIndex);
+
+}
+
+function lightboxPrev(){
+
+    currentIndex--;
+
+    if(currentIndex < 0){
+
+        currentIndex = galleryItems.length - 1;
+
+    }
+
+    openLightbox(currentIndex);
+
+}
 
 /* ======================== TESTIMONIAL AUTO ======================== */
 document.addEventListener('DOMContentLoaded', () => {
